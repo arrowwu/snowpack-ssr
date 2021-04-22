@@ -25,6 +25,7 @@ export default async function server(isDev) {
     // define the template engine
     app.engine("jsx", templateEngineFunc(devServer));
     app.use(devServer.handleRequest);
+<<<<<<< HEAD
 
     // specify the views directory
     app.set("views", path.join(process.cwd(), "client", "pages"));
@@ -43,6 +44,19 @@ export default async function server(isDev) {
   }
 
   
+=======
+  } else {
+    // define the template engine
+    app.engine("jsx", templateEngineFunc());
+    app.use(express.static(path.join(process.cwd(), "build")));
+  }
+
+  // specify the views directory
+  app.set("views", path.join(process.cwd(), "client", "pages"));
+
+  // register the template engine, now it will be able to render .jsx files
+  app.set("view engine", "jsx");
+>>>>>>> Initial commit
 
   return app;
 }

@@ -3,9 +3,6 @@ const getFilePath = (filePath, isDev) => {
     return filePath.split("client")[1];
   }
   return filePath.split("build")[1];
-  
 }
   
-  
-
 export default getFilePath;
