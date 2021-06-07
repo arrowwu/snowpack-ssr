@@ -12,8 +12,8 @@ const handleClick = name => {
 }
 
 const Champion = props => {  
-  const [state, ] = useState(props);
-  const { name, title, stats} = state;
+ 
+  const { name, title, stats} = props;
   return (
     <>
       <Nav />

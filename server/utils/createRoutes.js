@@ -16,6 +16,7 @@ export default () => {
   
   route.get("/champions/:id", (req, res) => {
     res.setHeader("a-header", "contents-of-header");
+    res.setHeader("Cache-Control", "public, max-age=15");
     res.render('Champions/Champion/Index', req.params);
   });
 

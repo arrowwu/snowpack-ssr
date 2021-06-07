@@ -12,8 +12,6 @@ const { startServer, createConfiguration } = pkg;
 export default async function server(isDev) {
   const app = express();
   
-  
-  
   app.use('/', createRoutes());
 
   // reference: https://expressjs.com/en/advanced/developing-template-engines.html
