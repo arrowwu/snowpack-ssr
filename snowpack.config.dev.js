@@ -8,4 +8,7 @@ export default {
     },
   },
   mode: "development",
+  devOptions: {
+    hmr: true
+  },
 };
